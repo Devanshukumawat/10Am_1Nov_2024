@@ -1,0 +1,15 @@
+{
+  "name": "10amreactapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Devanshu",
+  "license": "ISC",
+  "dependencies": {
+    "password": "^0.1.1",
+    "prompt-sync": "^4.2.0"
+  }
+}

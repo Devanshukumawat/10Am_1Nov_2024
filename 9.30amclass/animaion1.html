@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .spider1 {
+        width: 200px;
+        position: relative;
+        animation-name: spider1;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .spider2 {
+        width: 200px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        animation-name: spider2;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes spider1 {
+        0% {
+          top: 0px;
+          left: 0px;
+        }
+        30% {
+          top: 300px;
+          left: 300px;
+        }
+        60% {
+          top: 0px;
+          left: 500px;
+        }
+        85% {
+          top: 400px;
+          left: 650px;
+        }
+        100% {
+          top: 0px;
+          left: 900px;
+        }
+      }
+
+      @keyframes spider2 {
+        0% {
+          top: 0px;
+          right: 0px;
+        }
+        50% {
+          top: 400px;
+          right: 0px;
+        }
+        100% {
+          top: 700px;
+          right: 0px;
+        }
+      }
+      div > div{
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin: 10px;
+        position: relative;
+        animation-name: hello;
+        animation-duration: 4s;
+        animation-iteration-count: infinite
+      }
+      .box1{
+        animation-timing-function: ease;
+        background-color: aqua;
+      }
+      .box2{
+        animation-timing-function: ease-in;
+        background-color: black;
+      }
+      .box3{
+        animation-timing-function: ease-in-out;
+        background-color: blueviolet;
+      }
+      .box4{
+        animation-timing-function: ease-out;
+        background-color: burlywood;
+      }
+      .box5{
+        animation-timing-function: linear;
+        background-color: chartreuse;
+      }
+      @keyframes hello{
+        from{
+            left: 0px;
+
+        }
+        to{
+            left: 800px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="/media/pinpng.com-slender-man-png-1137.png"
+        alt=""
+        class="spider1"
+      />
+    </div>
+    <div>
+      <img
+        src="/media/spider-man-png-spiderman-11563230518fsdt8a9hyc.png"
+        alt=""
+        class="spider2"
+      />
+    </div>
+   
+
+    <div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <div class="box4"></div>
+      <div class="box5"></div>
+    </div>
+  </body>
+</html>

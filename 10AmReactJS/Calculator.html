@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Task</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./media/WhatsApp.svg.webp" type="image/x-icon">
+
+    <style>
+        div{
+            text-align: center;
+        }
+
+        table{
+            margin: auto;
+        }
+
+        table,tr,th,td{
+            border: 2px solid black;
+
+        }
+        table td{
+            background-color: gray;
+        }
+        table td input{
+            background-color: black;
+            color: white;
+        }
+
+        table th input{
+            background-color: brown;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div>Calculator UI</div>
+    <table >
+        <tr>
+            <th>
+                <input type="text" name="" id="display">
+            </th>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="1" onclick="handleValue('1')">
+                <input type="button" value="2" onclick="handleValue('2')">
+                <input type="button" value="3" onclick="handleValue('3')">
+                <input type="button" value="+" onclick="handleValue('+')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center" > 
+                <input type="button" value="4" onclick="handleValue('4')">
+                <input type="button" value="5" onclick="handleValue('5')">
+                <input type="button" value="6" onclick="handleValue('6')">
+                <input type="button" value="-" onclick="handleValue('-')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="7" onclick="handleValue('7')">
+                <input type="button" value="8" onclick="handleValue('8')">
+                <input type="button" value="9" onclick="handleValue('9')">
+                <input type="button" value="*" onclick="handleValue('*')">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="C" onclick="handleClear()">
+                <input type="button" value="0" onclick="handleValue('0')">
+                <input type="button" value="=" onclick="handleEqual()" >
+                <input type="button" value="/" onclick="handleValue('/')">
+                <input type="button" value="🔙" onclick="handleBack()">
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+
+    </script>
+
+
+    <script >
+        let display = document.getElementById("display")
+
+        function handleValue(input){
+            display.value += input
+        }
+
+        function handleClear(){
+            display.value = " "
+        }
+
+        function handleEqual(){
+            display.value = eval(display.value)
+        }
+
+        function handleBack(){
+            display.value = display.value.slice(0,-1)
+        }
+
+
+        
+
+    </script>
+
+</body>
+</html>
